@@ -1,0 +1,295 @@
+.preferences_cont {
+    white-space: nowrap;
+    position: fixed;
+    left: 0px;
+    top: 5px;
+    z-index: 99;
+    width: 60px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+}
+.preferences_acting_player {
+    background: #4a4033;
+}
+.preferences_nonacting_player {
+    background: #303030;
+}
+.preferences-divider {
+    background: rgba(170, 170, 170, 0.3);
+    height: 2px;
+    width: 80%;
+    margin-bottom: 8px;
+}
+.preferences_item {
+    width: 46px;
+    background: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+.preferences_item_shortcut {
+    height: 60px;
+}
+
+.preferences_item--info {
+    position: absolute;
+    bottom: 111px;
+    left: 0px;
+    margin-left: 7px;
+    height: 46px
+}
+
+.preferences_item--help {
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    margin-left: 7px;
+    height: 46px
+}
+
+.preferences_item--settings {
+    position: absolute;
+    bottom: 10px;
+    height: 46px;
+}
+
+.preferences_tm {
+  background: url(/assets/board/mars.png);
+  width: 50px;
+  height: 50px;
+  margin-top: 3px;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px 1px black;
+  font-family: Prototype;
+  text-align: center;
+  line-height: 20px;
+  color: black;
+  background-size: 100px;
+  background-position: -26px -20px;
+}
+.preferences-gen-text {
+    font-size: 14px;
+    margin-top: 2px;
+}
+.preferences-gen-marker {
+    font-size: 34px;
+}
+
+.preferences_player {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.preferences_player_inner {
+    width: 26px;
+    height: 26px;
+    border-radius: 3px;
+}
+
+.preferences_global_params {
+    width: 60px;
+    margin-bottom: 5px;
+}
+
+.preferences_checkmark{
+    display: inline-block;
+    filter: invert(92%) sepia(11%) saturate(1093%) hue-rotate(46deg) brightness(98%) contrast(85%);
+    width: 18px;
+    height: 18px;
+}
+
+.preferences_temperature-tile {
+  background-image: url(./assets/global-parameters/temperature.png);
+  width: 16px;
+  height: 46px;
+  background-size: 16px 46px;
+  margin-left: 22px;
+  margin-top: 10px;
+}
+
+.preferences_oxygen-tile {
+  background-image: url(./assets/global-parameters/oxygen.png);
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.preferences_ocean-tile {
+  background-image: url(./assets/tiles/ocean.png);
+  width: 32px;
+  height: 36px;
+  background-size: 32px 36px;
+  margin-left: 14px;
+  margin-top: 10px;
+}
+
+.preferences_global_params_value {
+  text-align: center;
+  font-family: "Prototype";
+  margin-top: -5px;
+}
+
+.preferences_icon {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.preferences_icon.preferences_icon--actions {
+    margin-top: 7px;
+    background-image: url(assets/sidebar/preferences_actions.png);
+}
+
+.preferences_icon.preferences_icon--cards {
+    background-image: url(assets/sidebar/preferences_cards.png);
+}
+
+.preferences_icon.preferences_icon--board {
+    margin-top: 7px;
+    background-image: url(assets/sidebar/preferences_board.png);
+}
+
+.preferences_icon.preferences_icon--info {
+    background-image: url(assets/sidebar/preferences_info.png);
+    background-size: 36px 36px;
+}
+
+.preferences_icon.preferences_icon--help {
+    background-image: url(assets/sidebar/preferences_help.png);
+    background-size: 36px 36px;
+}
+
+.preferences_icon.preferences_icon--settings {
+    background-image: url(assets/sidebar/preferences_settings.png);
+}
+
+.preferences_panel_actions {
+    text-align: center;
+}
+
+.preferences_panel {
+    padding: 15px 15px 15px 20px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 53px;
+    color: #c6c6c6;
+    background: #000000;
+    max-height: calc(85vh);
+    overflow-y: auto;
+}
+
+.preferences_item--is-active::after {
+    content: " ";
+    width: 10px;
+    height: 46px;
+    position: absolute;
+    background: #000;
+    margin: -5px 0 0 38px;
+}
+
+/* Visual effects of changing settings */
+
+/* Reduce all cards size */
+.preferences_small_cards .filterDiv,
+.preferences_small_cards .filterDiv:hover {
+    transform: scale(0.8);
+    margin: -22px -15px -15px -15px;
+}
+.preferences_small_cards .filterDiv.card-standard-project,
+.preferences_small_cards .filterDiv:hover.card-standard-project {
+    margin: -0px -10px -15px -10px;
+}
+
+.preferences_small_cards input[type="checkbox"]:checked + .filterDiv,
+.preferences_small_cards input[type="radio"]:checked + .filterDiv {
+    transform: scale(0.8);
+}
+
+/* Hide blocks */
+.preferences_hide_hand .player_home_block--hand,
+.preferences_hide_tag_overview .tag-overview-cont,
+.player_home_block--corp-names,
+.player_home_block--milestones-and-awards-scores,
+.player_home_block--automated_cards,
+.player_home_block--event_cards,
+.preferences_hide_log .player_home_block--hide_log,
+.preferences_hide_cards .player_home_block--cards{
+    display: none;
+}
+
+.preferences_panel_langs {
+    margin-left: 38px;
+}
+
+/* Remove background */
+.preferences_remove_background #player-home {
+    background: #222;
+}
+
+/* Card Magnification */
+.preferences_magnify_cards .filterDiv:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.preferences_magnify_cards .cards-stack:hover,
+.preferences_magnify_cards .cards-stack-first:hover {
+    z-index: 2;
+    transform: scale(1);
+}
+
+/* Magnify the wee little cards in a special way, if requested */
+.preferences_small_cards.preferences_magnify_cards .filterDiv:hover {
+    transform: scale(0.95);
+}
+
+/* Description Magnification */
+.preferences_magnify_card_descriptions .description:hover {
+    background: #fffd;
+    transform: scale(1.5);
+    border-radius: 5px;
+    width: 150px;
+    margin-left: 31px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+    padding: 3px;
+    z-index: 5;
+}
+
+.info_panel-spacing{
+    padding-bottom: 40px;
+}
+
+.info-panel-title{
+    font-size: 25px;
+    font-style: normal;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.info_panel {
+    padding: 15px 15px 15px 20px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 53px;
+    color: #c6c6c6;
+    background: #000000;
+    max-height: calc(85vh);
+    overflow-y: auto;
+}
+
+.info_panel_actions {
+    text-align: center;
+}
